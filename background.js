@@ -8,13 +8,14 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   }
 });
 
-
+/*
 var filter = {
   url:
   [
     {hostContains: "youtube"}
   ]
 }
+*/
 
 
 function logOnHistoryStateUpdated(details) {

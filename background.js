@@ -1,5 +1,6 @@
 console.log("beginning of background.js");
 
+
 //this control when to show the pageActino icon
 //only to those URL not starting with about:
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
@@ -16,7 +17,9 @@ function logOnHistoryStateUpdated(details) {
   console.log("Transition qualifiers: " + details.transitionQualifiers);
 }
 
-chrome.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+//chrome.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+chrome.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated);
 //end of test webNavigation.onHistorySateUpdated
+
 
 console.log("end of background.js");

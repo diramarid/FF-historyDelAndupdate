@@ -16,6 +16,7 @@ var filter = {
   ]
 }
 
+<<<<<<< HEAD
 function logOnHistoryStateUpdated(details) {
   console.log("onHistoryStateUpdated: " + details.url);
   console.log("Transition type: " + details.transitionType);
@@ -23,4 +24,11 @@ function logOnHistoryStateUpdated(details) {
 }
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+=======
+function logOnCompleted(details) {
+  console.log("onCompleted: " + details.url);
+}
+
+chrome.webNavigation.onCompleted.addListener(logOnCompleted, filter);
+>>>>>>> 3007eca952568fa9f80376a5cfa6764bf99c149b
 console.log("end of background.js");

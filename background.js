@@ -8,16 +8,8 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   }
 });
 
-/*
-var filter = {
-  url:
-  [
-    {hostContains: "youtube"}
-  ]
-}
-*/
 
-
+//test webNavigation.onHistorySateUpdated
 function logOnHistoryStateUpdated(details) {
   console.log("onHistoryStateUpdated: " + details.url);
   console.log("Transition type: " + details.transitionType);
@@ -25,5 +17,6 @@ function logOnHistoryStateUpdated(details) {
 }
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+//end of test webNavigation.onHistorySateUpdated
 
 console.log("end of background.js");
